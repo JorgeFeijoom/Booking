@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Booking </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"> 
+</head>
+<body>
+    <div id="cookies"> <p> Hey! We are using cookies here :) - Click this box to accept</p></div>
+    <header> 
+        <nav>
+            <div><h1> <a id="title" href="#s1">Accomodation Booking |</a></h1></div>
+            <ul>
+                <li class="nav"> <a id="aCalendar" href="#content"> Calendar </a> </li>
+                <li class="nav"> <a id="aBooking" href="#booking"> Check your reservation! </a> </li>
+                <li class="nav"> <a id="aContact"href="#contacto"> Contact </a> </li>
+                <li class="nav"> <a id="aAbout" href="#section s6"> About </a> </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="pages">
+        <div class="section s1">
+            <div class="destination">
+                <div id="search">
+                        <form id="searchForm"><img id="searchImg" src="images/search.png">
+                        <input id="searchInput" onkeyup="searchFunction()" class="inSearch" type="text" name="search" title="Type in a name" placeholder="Search.." value="">
+                        </form>
+                        <ul id="paises">
+                            <li><a>Barcelona</a></li>
+                            <li><a>Bangkok</a></li>
+                            <li><a>London</a></li>
+                            <li><a>New York</a></li>
+                            <li><a>Rome</a></li>
+                            <li><a>Paris</a></li>
+                            <li><a>Tokyo</a></li>
+                        </ul>
+                        <form id="nameForm">
+                            <img id="nameImg" src="images/user.png">
+                            <input id="nameInput" class="inName" type="text" name="search" title="Type in a name" placeholder="Name" value="">
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="section s2">
+            <div id="content">
+                <h2> Select the days  </h2>
+            </div>
+            <div id="cal"> 
+                <div class="header"> 
+                    <span class="month-year" id="label"> November 2017 </span> 
+                    <div id="bar1"> </div>
+                    <div id="bar2"> </div>
+                    <div id="bar3"> </div>
+                </div> 
+                <table id="days"> 
+                    <td>mon</td> 
+                    <td>tue</td> 
+                    <td>wed</td> 
+                    <td>thu</td> 
+                    <td>fri</td> 
+                    <td>sat</td>
+                    <td>sun</td> 
+                </table> 
+                <div id="cal-frame"> 
+                <table class="curr"> 
+                    <tbody> 
+                        <tr><td class="nil"></td><td class="nil"></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr> 
+                        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr> 
+                        <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr> 
+                        <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr> 
+                        <tr><td>27</td><td>28</td><td>29</td><td>30</td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr> 
+                    </tbody> 
+                </table>
+                </div> 
+                <div id="formDays">
+                    <form> 
+                        <div class="botonDays">
+                            <input name="days" type="submit" class="buttonDays" value="Select this days!" />                       
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="selection"></div>
+        </div>
+        <div class="section s3">
+            <div id="book">
+                    <h2> Please fill in your details </h2>
+                <form id="formBook" name="formBook" method="post">
+                        <div> 
+                            <input title="Your full name" id="nameBook" type="text" for="name" class="textBook" name="name" placeholder="Full Name"/> 
+                        </div> 
+                        <div>
+                            <input title="Your email" id="emailBook"type="text" class="textBook" name="email" placeholder="Email" />
+                        </div>
+                        <div class="selectBook">
+                            <p>Room type</p>
+                            <select id="roomBook" name="roomType">
+                                <option value="Standard">Standard Room (1 to 2 people)</option>
+                                <option value="Family">Family Room (1 to 4 people) </option>
+                                <option value="Private">Private Room (1 person) </option>
+                                <option value="Mix">Mix dorm room (6 people)</option>
+                                <option value="Female">Female dorm room (6 people)</option>
+                                <option value="Male">Male dorm room (6 people)</option>
+                            </select>
+                        </div>
+                        <div class="selectBook">
+                            <p>Number of guest</p>
+                            <input id="guest" type="number" name="numberOf" data-type="input-spinner" value="0" data-component="spinner">
+                        </div>
+                        <div class="textareaBook">
+                            <textarea id="commentBook" name="message" placeholder="Write here any comments!"></textarea>
+                        </div>
+                        <div class="buttonBook">
+                            <input name="send" type="submit" class="buttonBookInput" value="Book now" />                       
+                        </div>
+                </form>  
+            </div>
+        </div>
+        <div class="section s4">
+            <div id="booking">
+                <div><h2 id="contactTitle">We have your accomodation ready in <span style="font-weight: bold; color: #ff6600;" id="cityBooking"></span></h2></div> 
+                <div class="booking">
+                    <ul id="datesBooking">
+                        <li> Reservation Days: </li>
+                    </ul>
+                </div>
+                <div class="booking"><p><span id="nameBooking"></span></p></div>
+                <div class="booking"><p id="emailBooking"></p></div>
+                <div class="booking"><p>Room type: <span style="font-weight: bold; color:#00802b;" id="roomBooking"></span> </p></div>
+                <div class="booking"><p>Number of guest: <span style="font-weight: bold; color:#00802b;" id="guestBooking"></span></p></div>
+                <div class="booking"><p>We are going to hear your preferences: <span style="font-weight: bold; color:#00802b;" id="commentBooking"></span> </p></div>
+                
+                <form>
+                    <button class="buttonImages">Click here for pictures of <span id="buttonBooking"></span></button>
+                </form>
+                <div class="images">    
+                    <ul id="photos">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section s5">
+            <div id="contacto">
+                <div><h2 id="contactTitle">Contact us</h2></div>
+                <form id="form1" name="form1" method="post">
+                    <div>
+                        <div class="formulario"> 
+                            <input type="text" for="name" id="name" name="name" placeholder="Name"/> 
+                        </div> 
+                        <div class="formulario">  
+                            <input type="text" id="email" name="email" placeholder="Email" />
+                        </div>
+                        <div class="formulario">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" />
+                        </div>
+                        <div class="textarea">
+                            <textarea id="message" name="message" placeholder="Write here your message!"></textarea>
+                        </div>
+                        <div class="boton">
+                            <input name="send" type="submit" class="buttonContact" value="Send message" />                       
+                        </div>
+                    </div> 
+                </form>  
+            </div>
+        </div>
+        <div class="goUp in"></div>
+    </div>
+    <footer>    
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/send.php"></script>
+</body>
+</html>
+    

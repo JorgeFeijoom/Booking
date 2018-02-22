@@ -1,0 +1,215 @@
+<!DOCTYPE html> 
+
+<html> 
+
+  <head>		
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+    <title>COM601.39937 / COM642.42492 Assignments Access Page</title> 
+
+    <!-- This web page should be located as in the example address below (only the student id number will be different)  -->
+
+    <!-- https://scm.ulster.ac.uk/~B00xxxxx/workspace/IA_1415/access.html                               -->
+
+    <!-- For assignment submission purporses the 4 buttons in each fieldset should link -->
+
+    <!--   to the files with the names specified below in the 2 corresponding subdirectories       -->
+
+    <!-- For assignment 1 -->
+
+    <!-- https://scm.ulster.ac.uk/~B00xxxxx/workspace/IA_1415/assignment_1/jquery_demos.html            -->
+
+    <!-- https://scm.ulster.ac.uk/~B00xxxxx/workspace/IA_1415/assignment_1/log.pdf                      -->
+
+    <!-- https://scm.ulster.ac.uk/~B00xxxxx/workspace/IA_1415/assignment_1/timestamp.jpg                -->
+
+
+
+    <!-- For assignment 2 -->
+
+
+
+    <!-- https://scm.ulster.ac.uk/~IA_1415_Xn/workspace/assignment_2/fan.mov                    -->
+
+    <!-- https://scm.ulster.ac.uk/~IA_1415_Xn/workspace/assignment_2/evaluation_report.pdf        -->
+
+
+    <!-- Note: the 5 links in the comments above are absolute links, provided for clarity          -->
+
+    <!-- In your final version of this file, the links should be specified in relative form, e.g.  -->
+
+    <!--          assignment_1/jquery_demos.html                                                   -->
+    <!-- Google is one of a number of Content Delivery Networks (CDN) that provide the jQuery library online -->
+
+
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="date_time.js"></script>
+
+    <style type="text/css">
+
+      body {background-color: rgb(248, 248, 255);}
+
+      #liveExample {
+        padding: 1em;
+        background-color: #EED;
+        border: 1px solid #CCC;
+        max-width: 400px;
+        margin: auto;
+        margin-top: 3em;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .3);
+        -moz-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .3);
+        box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .3);
+      }
+
+      * {
+        color: #000077;
+        font-family: arial;
+        text-decoration: none;
+        line-height: 1.6em;
+        margin: 0;
+      }
+	  
+      div {
+        display: block;
+      }
+
+      #browserInfo {
+        position: relative; 
+        top: 1em;
+        font-size: x-small;
+      }
+
+      .highlight {
+        font-weight: bold;
+      }
+
+      /*  .button-link css below using CSS3 styling - sourced (with minor modifications)
+          from http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3/    */
+
+      .button-link {
+        font-size: small;
+        padding: 3px 6px;
+        background: #4479BA;
+        color: #FFF;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border: solid 1px #20538D;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      .button-link:hover {
+        background: #356094;
+        border: solid 1px #2A4E77;
+        text-decoration: none;
+      }
+
+      .button-link:active {
+        -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        background: #2E5481;
+        border: solid 1px #203E5F;
+      }
+
+    </style>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+        });
+   
+    </script>
+    <script type="text/javascript"> $(document).ready(function(){
+            $("#browserInfo").append("<p class='highlight'>Browser details detected at " + getClockTime() + "</p>"); $("#browserInfo").append("<p>Platform: " + navigator.platform + "</p>"); $("#browserInfo").append("<p>Agent: " + navigator.userAgent + "</p>"); $("#browserInfo").append("<p>Protocol: " + navigator.platform + "</p>");$("#browserInfo").append("<p>Platform: " + navigator.platform + "</p>"); $("#browserInfo").append("<p>Protocol: " + location.protocol + "</p>"); $("#browserInfo").append("<p>Port: " + location.port + "</p>");$("#browserInfo").append("<p>Hostname: " + location.hostname + "</p>"); $("#browserInfo").append("<p>Pathname: " + location.pathname + "</p>");$("#browserInfo").append("<p>History: " + history.length + "</p>"); $("#browserInfo").append("<p>Screen Height: " + screen.height + "</p>");$("#browserInfo").append("<pn>Screen Width: " + screen.width + "</p>"); $("#browserInfo").append("<p>Window Height: " + window.outerHeight + "</p>"); $("#browserInfo").append("<p>Window Width: " + window.outerWidth + "</p>");
+            
+            if (navigator.javaEnabled){
+                $("#browserInfo").append("<p> Java: enabled</p>");
+            } else {
+                $("#browserInfo").append("<p> Java: not enabled</p>"); }
+            if (navigator.cookieEnabled){
+                $("#browserInfo").append("<p> Cookies: enabled</p>");
+            } else {
+                $("#browserInfo").append("<p> Cookies: not enabled</p>"); }
+            }); 
+
+            
+      </script>
+  </head>
+
+  <body>
+    <div id="liveExample">
+
+      <div>
+
+        <h3>COM601.39937 / COM642.42492 Assignments Access Page</h3>
+
+        <h2>Jorge Feijoo Melian</h2> <!-- Change to your name      -->
+
+        <h3 >B00744900</h3>  <!-- Change to your id number -->
+        <h3>University of Ulster</h3>
+
+      </div>
+
+      <!-- Links to generic groups and documents should be changed to point to assignment work -->
+
+
+
+      <form>
+
+         <fieldset>
+
+          <legend>Assignment 1</legend>
+
+          <a href="assignment_1/jquery_form.html" class="button-link" target="_blank">Live web site</a>
+
+          <a href="assignment_1/technical_log.pdf" class="button-link" target="_blank">technical_log.pdf</a>
+
+          <a href="assignment_1/video.mov" class="button-link" target="_blank">Video Overview</a>
+
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>Assignment 2 - Group Work</legend>
+
+		  <a href="https://scm.ulster.ac.uk/~COM601_Xn/workspace/assignment_2/index.php" class="button-link" target="_blank">Live web site</a>
+          <a href="https://scm.ulster.ac.uk/~COM601_Xn/workspace/assignment_2/cart.mov" class="button-link" target="_blank">Video Screencast</a>
+<br />
+          <a href="https://scm.ulster.ac.uk/~COM601_Xn/workspace/assignment_2/source.zip" class="button-link" target="_blank">Source files</a>
+          
+          <a href="https://scm.ulster.ac.uk/~COM601_Xn/workspace/assignment_2/features_usability_report.pdf" class="button-link" target="_blank">features_usability_report.pdf</a>
+
+        </fieldset>
+
+      </form>
+
+      <div>
+
+        <div id="browserInfo"></div> 
+
+      </div>   		    	
+
+    </div>
+
+  </body>
+
+</html>
+
